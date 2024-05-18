@@ -1,1 +1,52 @@
+/*vars START*/
+:root {
+    --bar-background-color: #333;
+    --loader-color: #60c030;
+    --cool-black: #151922;
+}
+/*vars END*/
+/*loader START*/
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:var(--cool-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 80%;
+    height: 10px;
+    background-color:  var(--bar-background-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loader-bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--loader-color);
+    animation: load 2s forwards;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+/*loader END*/
+/*main-content START*/
+#main-content {
+    display: none;
+}
+/*main-content END*/
